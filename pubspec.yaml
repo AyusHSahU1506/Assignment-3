@@ -1,0 +1,49 @@
+name: foodie
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  chewie: ^1.7.1
+  country_code_picker: ^3.0.0
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.9.0
+  intl_phone_field: ^3.2.0
+  location: ^5.0.3
+  otp_text_field: ^1.1.3
+  video_player: ^2.7.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+   - assets/icons/
+   - assets/images/
+  
+  fonts:
+  - family: Inter
+    fonts:
+      - asset: fonts/Inter-VariableFont_slnt,wght.ttf
+  - family: Inder
+    fonts:
+      - asset: fonts/Inder-Regular.ttf
+  - family: BauhausBold
+    fonts:
+      - asset: fonts/BauhausBold.ttf
+  - family: BauhausBoldItalic
+    fonts:
+      - asset: fonts/BauhausBoldItalic.ttf
+  - family: BauhausItalic
+    fonts:
+      - asset: fonts/BauhausItalic.ttf
+  - family: BauhausRegular
+    fonts:
+      - asset: fonts/BauhausRegular.ttf
