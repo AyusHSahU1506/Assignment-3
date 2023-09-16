@@ -1,5 +1,5 @@
+import 'package:assignment3/Splashscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:foodie/SplashScreen.dart';
 
 void main() {
   runApp(const MainApp());
