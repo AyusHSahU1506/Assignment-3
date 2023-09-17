@@ -1,3 +1,4 @@
+import 'package:assignment3/OtpScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -93,10 +94,10 @@ class _SignInScreenState extends State<SignInScreen> {
                       backgroundColor: const Color(0xfff43127),
                     ),
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => const otpScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const otpScreen()));
                     },
                     child: const Text(
                       "Continue",
