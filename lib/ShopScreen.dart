@@ -144,7 +144,7 @@ class _ShopPageState extends State<ShopPage> {
                     ]),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -152,66 +152,126 @@ class _ShopPageState extends State<ShopPage> {
                         children: [
                           Container(
                             height: 30,
-                            width: 100,
+                            width: 150,
                             decoration: const BoxDecoration(
                                 color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset("assets/icons/ramen.png"),
+                                const Text(
+                                  "Ramen(5)",
+                                  style: TextStyle(fontFamily: 'Inder'),
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
                           Container(
                             height: 30,
-                            width: 100,
+                            width: 150,
                             decoration: const BoxDecoration(
                                 color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset("assets/icons/pizza.png"),
+                                const Text(
+                                  "pizza(9)",
+                                  style: TextStyle(fontFamily: 'Inder'),
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
                           Container(
                             height: 30,
-                            width: 100,
+                            width: 150,
                             decoration: const BoxDecoration(
                                 color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset("assets/icons/burger.png"),
+                                const Text(
+                                  "Burger(18)",
+                                  style: TextStyle(fontFamily: 'Inder'),
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
                           Container(
                             height: 30,
-                            width: 100,
+                            width: 150,
                             decoration: const BoxDecoration(
                                 color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset("assets/icons/Fries.png"),
+                                const Text(
+                                  "French Fries(14)",
+                                  style: TextStyle(fontFamily: 'Inder'),
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
                           Container(
                             height: 30,
-                            width: 100,
+                            width: 150,
                             decoration: const BoxDecoration(
                                 color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset("assets/icons/FastFood.png"),
+                                const Text(
+                                  "Fast Food(10)",
+                                  style: TextStyle(fontFamily: 'Inder'),
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
                           Container(
                             height: 30,
-                            width: 100,
+                            width: 150,
                             decoration: const BoxDecoration(
                                 color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(5))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset("assets/icons/SoftDrink.png"),
+                                const Text(
+                                  "Soft Drink(28)",
+                                  style: TextStyle(fontFamily: 'Inder'),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -232,18 +292,43 @@ class _ShopPageState extends State<ShopPage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 1),
+                    padding: const EdgeInsets.symmetric(vertical: 5),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
                           Container(
                             decoration: const BoxDecoration(
-                                color: Colors.white,
+                                color: Color(0xfff6f1e7),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10))),
-                            height: 100,
+                            height: 160,
                             width: 100,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 100,
+                                  width: 100,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.red,
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          topRight: Radius.circular(10))),
+                                ),
+                                const Text("data"),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.red,
+                                    ),
+                                    Text("4.5")
+                                  ],
+                                ),
+                                Text("Rs.50")
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
@@ -392,7 +477,7 @@ class _ShopPageState extends State<ShopPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Column(
