@@ -17,6 +17,10 @@ class FilterList extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
+            child: Text(
+              "data",
+              textAlign: TextAlign.center,
+            ),
           ),
           const SizedBox(
             width: 10,

@@ -44,34 +44,38 @@ class _SignInScreenState extends State<SignInScreen> {
               const SizedBox(
                 height: 20,
               ),
-              Stack(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: Divider(
-                      color: Colors.blueGrey,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.blueGrey,
+                        thickness: .8,
+                      ),
                     ),
-                  ),
-                  Positioned(
-                      bottom: .01,
-                      left: 125,
-                      child: Container(
-                          color: Colors.white,
-                          child: Text(
-                            " Log in or sign up ",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17,
-                                color: Colors.blueGrey.shade900,
-                                fontFamily: 'Inder'),
-                          )))
-                ],
+                    Text(
+                      " Login OR Sign Up ",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17,
+                          color: Colors.blueGrey.shade800,
+                          fontFamily: 'Inder'),
+                    ),
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.blueGrey,
+                        thickness: .8,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 15,
               ),
               const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                   child: Form(
                       child: IntlPhoneField(
                     initialCountryCode: 'IN',
@@ -85,7 +89,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                 BorderRadius.all(Radius.circular(20)))),
                   ))),
               SizedBox(
-                width: w * .87,
+                width: w * .90,
                 height: h * .11,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -108,30 +112,34 @@ class _SignInScreenState extends State<SignInScreen> {
                     )),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
-              Stack(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                    child: Divider(
-                      color: Colors.blueGrey,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.blueGrey,
+                        thickness: .8,
+                      ),
                     ),
-                  ),
-                  Positioned(
-                      left: 181,
-                      bottom: 8,
-                      child: Container(
-                          color: Colors.white,
-                          child: Text(
-                            " Or ",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17,
-                                color: Colors.blueGrey.shade800,
-                                fontFamily: 'Inder'),
-                          ))),
-                ],
+                    Text(
+                      " OR ",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17,
+                          color: Colors.blueGrey.shade800,
+                          fontFamily: 'Inder'),
+                    ),
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.blueGrey,
+                        thickness: .8,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 10,

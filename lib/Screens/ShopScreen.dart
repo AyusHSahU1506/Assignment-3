@@ -1,4 +1,4 @@
-import 'package:assignment3/widgets/BestDealsList.dart';
+import 'package:assignment3/widgets/ExploreList.dart';
 import 'package:assignment3/widgets/CategoriesList.dart';
 import 'package:assignment3/widgets/FilterList.dart';
 import 'package:assignment3/widgets/FoodList.dart';
@@ -69,7 +69,9 @@ class _ShopPageState extends State<ShopPage> {
                                   Text(
                                     "Santoshi Nagar",
                                     style: TextStyle(
-                                        fontSize: 16, fontFamily: 'Inter'),
+                                        fontSize: 16,
+                                        fontFamily: 'Inter',
+                                        fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     "Near Temple",
@@ -162,7 +164,7 @@ class _ShopPageState extends State<ShopPage> {
                       ),
                     ),
                     Text(
-                      " CATEGORIES ",
+                      " EXPLORE ",
                       style: TextStyle(
                           fontSize: 17,
                           fontFamily: 'Inter',
@@ -178,7 +180,7 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const CategoriesList(),
+                  const ExploreList(),
                   const SizedBox(
                     height: 20,
                   ),
@@ -191,7 +193,7 @@ class _ShopPageState extends State<ShopPage> {
                         ),
                       ),
                       Text(
-                        " EXPLORE ",
+                        " CATEGORIES ",
                         style: TextStyle(
                             fontSize: 17,
                             fontFamily: 'Inter',
@@ -208,7 +210,7 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const BestDeals(),
+                  const CategoriesList(),
                   const SizedBox(
                     height: 20,
                   ),

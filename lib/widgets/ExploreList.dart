@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BestDeals extends StatelessWidget {
-  const BestDeals({
+class ExploreList extends StatelessWidget {
+  const ExploreList({
     super.key,
   });
 
