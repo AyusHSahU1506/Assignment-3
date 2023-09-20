@@ -1,4 +1,8 @@
-import 'package:assignment3/widgets/BestDeals.dart';
+import 'package:assignment3/widgets/BestDealsList.dart';
+import 'package:assignment3/widgets/CategoriesList.dart';
+import 'package:assignment3/widgets/FilterList.dart';
+import 'package:assignment3/widgets/FoodList.dart';
+import 'package:assignment3/widgets/RecommendedList.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -71,7 +75,6 @@ class _ShopPageState extends State<ShopPage> {
                             Image.asset(
                               "assets/icons/ShoppingCart.png",
                               height: 30,
-                              // color: const Color(0xfff43127),
                             ),
                             const SizedBox(
                               width: 10,
@@ -124,336 +127,100 @@ class _ShopPageState extends State<ShopPage> {
                       height: 170.w,
                       width: MediaQuery.of(context).size.width * .85.w,
                       decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: Image.asset(
-                        "assets/images/NewOfferCard.png",
-                      ),
+                          image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/NewOfferCard.png"),
+                              fit: BoxFit.cover),
+                          borderRadius: BorderRadius.all(Radius.circular(15))),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 10,
+                  const Row(children: [
+                    Expanded(
+                        child: Divider(
+                      color: Colors.red,
+                      thickness: 1,
+                    )),
+                    Text(
+                      " Categories ",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w500),
                     ),
-                    child: Row(children: [
+                    Expanded(
+                        child: Divider(
+                      color: Colors.red,
+                      thickness: 1,
+                    )),
+                  ]),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const CategoriesList(),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Row(
+                    children: [
+                      Expanded(
+                          child: Divider(
+                        color: Colors.red,
+                        thickness: 1,
+                      )),
                       Text(
-                        "Categories",
+                        " Today's Best Deals ",
                         style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w500),
                       ),
-                    ]),
+                      Expanded(
+                          child: Divider(
+                        color: Colors.red,
+                        thickness: 1,
+                      )),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 30,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Image.asset("assets/icons/ramen.png"),
-                                const Text(
-                                  "Ramen(5)",
-                                  style: TextStyle(fontFamily: 'Inder'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Image.asset("assets/icons/pizza.png"),
-                                const Text(
-                                  "pizza(9)",
-                                  style: TextStyle(fontFamily: 'Inder'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Image.asset("assets/icons/burger.png"),
-                                const Text(
-                                  "Burger(18)",
-                                  style: TextStyle(fontFamily: 'Inder'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Image.asset("assets/icons/Fries.png"),
-                                const Text(
-                                  "French Fries(14)",
-                                  style: TextStyle(fontFamily: 'Inder'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Image.asset("assets/icons/FastFood.png"),
-                                const Text(
-                                  "Fast Food(10)",
-                                  style: TextStyle(fontFamily: 'Inder'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Image.asset("assets/icons/SoftDrink.png"),
-                                const Text(
-                                  "Soft Drink(28)",
-                                  style: TextStyle(fontFamily: 'Inder'),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const BestDeals(),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Row(
+                    children: [
+                      Expanded(
+                          child: Divider(
+                        color: Colors.red,
+                        thickness: 1,
+                      )),
+                      Text(
+                        " Recommended ",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w500),
                       ),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                    child: Row(
-                      children: [
-                        Text(
-                          "Today's Best Deals",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5),
-                    child: BestDeals(),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                    child: Row(
-                      children: [
-                        Text(
-                          "Recommended",
-                          style: TextStyle(fontFamily: 'Inter', fontSize: 20),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Container(
-                              height: 80,
-                              width: 150,
-                              decoration: const BoxDecoration(
-                                  color: Color(0xfff6f1e7),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)))),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                              height: 80,
-                              width: 150,
-                              decoration: const BoxDecoration(
-                                  color: Color(0xfff6f1e7),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)))),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                              height: 80,
-                              width: 150,
-                              decoration: const BoxDecoration(
-                                  color: Color(0xfff6f1e7),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)))),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                          ),
-                        ],
-                      ),
-                    ),
+                      Expanded(
+                          child: Divider(
+                        color: Colors.red,
+                        thickness: 1,
+                      )),
+                    ],
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width * 85.w,
-                        height: 250,
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 85.w,
-                        height: 250,
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 85.w,
-                        height: 250,
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 85.w,
-                        height: 250,
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
-                      ),
-                    ],
-                  )
+                  const RecommendedList(),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const FilterList(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  FoodList()
                 ],
               ),
             ),
