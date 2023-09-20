@@ -1,3 +1,4 @@
+import 'package:assignment3/widgets/BestDeals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -291,81 +292,9 @@ class _ShopPageState extends State<ShopPage> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            height: 160,
-                            width: 100,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Container(
-                                  height: 100,
-                                  width: 100,
-                                  decoration: const BoxDecoration(
-                                      color: Colors.red,
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(10),
-                                          topRight: Radius.circular(10))),
-                                ),
-                                const Text("data"),
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.red,
-                                    ),
-                                    Text("4.5")
-                                  ],
-                                ),
-                                Text("Rs.50")
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            height: 100,
-                            width: 100,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            height: 100,
-                            width: 100,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Color(0xfff6f1e7),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            height: 100,
-                            width: 100,
-                          ),
-                        ],
-                      ),
-                    ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: BestDeals(),
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),

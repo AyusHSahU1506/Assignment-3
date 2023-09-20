@@ -1,4 +1,4 @@
-import 'package:assignment3/OtpScreen.dart';
+import 'package:assignment3/Auth/OtpScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
