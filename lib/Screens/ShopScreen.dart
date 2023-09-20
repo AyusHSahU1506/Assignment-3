@@ -19,12 +19,31 @@ class _ShopPageState extends State<ShopPage> {
     return ScreenUtilInit(
       designSize: const Size(350, 800),
       builder: (context, child) => Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                icon: Image(
+                    image: AssetImage("assets/icons/delivery.png"), height: 30),
+                label: 'Delivery'),
+            BottomNavigationBarItem(
+              icon: Image(
+                  image: AssetImage("assets/icons/wallet.png"), height: 30),
+              label: 'Wallet',
+            ),
+            BottomNavigationBarItem(
+              icon: Image(
+                  image: AssetImage("assets/icons/crown.png"), height: 30),
+              label: 'Premium',
+            ),
+          ],
+        ),
         backgroundColor: const Color(0xffffe7dc),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
               child: Column(
                 children: [
                   Container(
@@ -120,107 +139,114 @@ class _ShopPageState extends State<ShopPage> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
-                    child: Container(
-                      height: 170.w,
-                      width: MediaQuery.of(context).size.width * .85.w,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/NewOfferCard.png"),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(15))),
-                    ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 170.w,
+                    width: MediaQuery.of(context).size.width * .85.w,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/banner4.png"),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(15))),
+                  ),
+                  const SizedBox(
+                    height: 20,
                   ),
                   const Row(children: [
                     Expanded(
-                        child: Divider(
-                      color: Colors.red,
-                      thickness: 1,
-                    )),
+                      child: Divider(
+                        color: Colors.redAccent,
+                        thickness: .3,
+                      ),
+                    ),
                     Text(
-                      " Categories ",
+                      " CATEGORIES ",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 17,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500),
                     ),
                     Expanded(
-                        child: Divider(
-                      color: Colors.red,
-                      thickness: 1,
-                    )),
+                      child: Divider(
+                        color: Colors.redAccent,
+                        thickness: .3,
+                      ),
+                    ),
                   ]),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   const CategoriesList(),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   const Row(
                     children: [
                       Expanded(
-                          child: Divider(
-                        color: Colors.red,
-                        thickness: 1,
-                      )),
+                        child: Divider(
+                          color: Colors.redAccent,
+                          thickness: .3,
+                        ),
+                      ),
                       Text(
-                        " Today's Best Deals ",
+                        " EXPLORE ",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w500),
                       ),
                       Expanded(
-                          child: Divider(
-                        color: Colors.red,
-                        thickness: 1,
-                      )),
+                        child: Divider(
+                          color: Colors.redAccent,
+                          thickness: .3,
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   const BestDeals(),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   const Row(
                     children: [
                       Expanded(
-                          child: Divider(
-                        color: Colors.red,
-                        thickness: 1,
-                      )),
+                        child: Divider(
+                          color: Colors.redAccent,
+                          thickness: .3,
+                        ),
+                      ),
                       Text(
-                        " Recommended ",
+                        " RECOMMENDED FOR YOU ",
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w500),
                       ),
                       Expanded(
-                          child: Divider(
-                        color: Colors.red,
-                        thickness: 1,
-                      )),
+                        child: Divider(
+                          color: Colors.redAccent,
+                          thickness: .3,
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 15,
                   ),
                   const RecommendedList(),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   const FilterList(),
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  FoodList()
+                  const FoodList(),
                 ],
               ),
             ),
