@@ -1,9 +1,9 @@
 import 'package:assignment3/Screens/WishListScreen.dart';
-import 'package:assignment3/widgets/ExploreList.dart';
-import 'package:assignment3/widgets/CategoriesList.dart';
-import 'package:assignment3/widgets/FilterList.dart';
-import 'package:assignment3/widgets/MenuList.dart';
-import 'package:assignment3/widgets/RecommendedList.dart';
+import 'package:assignment3/utils/ExploreList.dart';
+import 'package:assignment3/utils/CategoriesList.dart';
+import 'package:assignment3/utils/FilterList.dart';
+import 'package:assignment3/utils/MenuList.dart';
+import 'package:assignment3/utils/RecommendedList.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -88,11 +88,11 @@ class _ShopPageState extends State<ShopPage> {
                           children: [
                             InkWell(
                               onTap: () {
-                                // Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //         builder: (context) =>
-                                //             const WishList()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const WishList()));
                               },
                               child: const Icon(
                                 Icons.favorite,
