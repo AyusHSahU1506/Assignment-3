@@ -7,7 +7,7 @@ import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
 
 class otpScreen extends StatefulWidget {
-  const otpScreen({super.key});
+  const otpScreen({super.key, required String phoneNumber});
 
   @override
   State<otpScreen> createState() => _OTPPageState();

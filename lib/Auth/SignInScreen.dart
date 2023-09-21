@@ -80,7 +80,6 @@ class _SignInScreenState extends State<SignInScreen> {
                       child: IntlPhoneField(
                     initialCountryCode: 'IN',
                     decoration: InputDecoration(
-                        // focusedBorder: InputBorder.none,
                         disabledBorder: InputBorder.none,
                         hintText: "Enter Phone Number",
                         hintStyle: TextStyle(fontFamily: 'Inter'),
@@ -101,7 +100,9 @@ class _SignInScreenState extends State<SignInScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const otpScreen()));
+                              builder: (context) => const otpScreen(
+                                    phoneNumber: '',
+                                  )));
                     },
                     child: const Text(
                       "Continue",

@@ -9,60 +9,108 @@ class FilterList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          Container(
-            height: 30,
-            width: 100,
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            child: Text(
-              "data",
-              textAlign: TextAlign.center,
+      child: Container(
+        height: 50,
+        child: Row(
+          children: [
+            Container(
+              height: 30,
+              width: 100,
+              decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 3.0,
+                        offset: Offset(
+                          0.0,
+                          5.0,
+                        ))
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+              child: const Text(
+                "data",
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-            height: 30,
-            width: 100,
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-            height: 30,
-            width: 100,
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-            height: 30,
-            width: 100,
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-            height: 30,
-            width: 100,
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-          ),
-        ],
+            const SizedBox(
+              width: 10,
+            ),
+            Container(
+              height: 30,
+              width: 100,
+              decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 3.0,
+                        offset: Offset(
+                          0.0,
+                          5.0,
+                        ))
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Container(
+              height: 30,
+              width: 100,
+              decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 3.0,
+                        offset: Offset(
+                          0.0,
+                          5.0,
+                        ))
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Container(
+              height: 30,
+              width: 100,
+              decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 3.0,
+                        offset: Offset(
+                          0.0,
+                          5.0,
+                        ))
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Container(
+              height: 30,
+              width: 100,
+              decoration: const BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 3.0,
+                        offset: Offset(
+                          0.0,
+                          5.0,
+                        ))
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+            ),
+          ],
+        ),
       ),
     );
   }

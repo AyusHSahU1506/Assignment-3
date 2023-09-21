@@ -1,7 +1,8 @@
+import 'package:assignment3/Screens/WishListScreen.dart';
 import 'package:assignment3/widgets/ExploreList.dart';
 import 'package:assignment3/widgets/CategoriesList.dart';
 import 'package:assignment3/widgets/FilterList.dart';
-import 'package:assignment3/widgets/FoodList.dart';
+import 'package:assignment3/widgets/MenuList.dart';
 import 'package:assignment3/widgets/RecommendedList.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -46,7 +47,7 @@ class _ShopPageState extends State<ShopPage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Container(
+                  SizedBox(
                     height: 50.h,
                     width: MediaQuery.of(context).size.width * .85.w,
                     child: Row(
@@ -85,28 +86,37 @@ class _ShopPageState extends State<ShopPage> {
                         ),
                         Row(
                           children: [
-                            Image.asset(
-                              "assets/icons/heart.png",
-                              height: 35,
-                              color: const Color(0xfff43127),
+                            InkWell(
+                              onTap: () {
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) =>
+                                //             const WishList()));
+                              },
+                              child: const Icon(
+                                Icons.favorite,
+                                color: Colors.red,
+                                size: 30,
+                              ),
                             ),
                             const SizedBox(
-                              width: 10,
+                              width: 15,
                             ),
                             Image.asset(
                               "assets/icons/ShoppingCart.png",
-                              height: 30,
+                              height: 25,
                             ),
                             const SizedBox(
-                              width: 10,
+                              width: 15,
                             ),
                             Container(
-                              height: 40,
-                              width: 40,
+                              height: 30,
+                              width: 30,
                               decoration: const BoxDecoration(
                                   shape: BoxShape.circle, color: Colors.white),
                               child: const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 7),
+                                padding: EdgeInsets.symmetric(vertical: 3),
                                 child: Text("A",
                                     style: TextStyle(
                                         fontSize: 20, fontFamily: 'Inter'),
@@ -177,12 +187,9 @@ class _ShopPageState extends State<ShopPage> {
                       ),
                     ),
                   ]),
-                  const SizedBox(
-                    height: 20,
-                  ),
                   const ExploreList(),
                   const SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   const Row(
                     children: [
@@ -208,7 +215,7 @@ class _ShopPageState extends State<ShopPage> {
                     ],
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   const CategoriesList(),
                   const SizedBox(
@@ -248,7 +255,33 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const FoodList(),
+                  const Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          color: Colors.redAccent,
+                          thickness: .3,
+                        ),
+                      ),
+                      Text(
+                        " MENU ",
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w500),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.redAccent,
+                          thickness: .3,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const MenuList(),
                 ],
               ),
             ),
