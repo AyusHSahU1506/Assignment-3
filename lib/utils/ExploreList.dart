@@ -31,7 +31,7 @@ class ExploreList extends StatelessWidget {
                     ],
                     color: Color(0xfff6f1e7),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                height: 150.h,
+                height: 140.h,
                 width: 120.w,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -46,38 +46,44 @@ class ExploreList extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Burger",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "4.5",
-                              style: TextStyle(fontFamily: 'Inder'),
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: Colors.red,
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Burger",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "4.5",
+                                style: TextStyle(fontFamily: 'Inder'),
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.red,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                    const Row(
-                      children: [
-                        Text(
-                          "Rs.50",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Rs.50",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -98,7 +104,7 @@ class ExploreList extends StatelessWidget {
                     ],
                     color: Color(0xfff6f1e7),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                height: 150.h,
+                height: 140.h,
                 width: 120.w,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -113,38 +119,44 @@ class ExploreList extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Pizza",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "4.8",
-                              style: TextStyle(fontFamily: 'Inder'),
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: Colors.red,
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Pizza",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "4.8",
+                                style: TextStyle(fontFamily: 'Inder'),
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.red,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                    const Row(
-                      children: [
-                        Text(
-                          "Rs.180",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Rs.180",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -165,7 +177,7 @@ class ExploreList extends StatelessWidget {
                     ],
                     color: Color(0xfff6f1e7),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                height: 150.h,
+                height: 140.h,
                 width: 120.w,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -180,38 +192,44 @@ class ExploreList extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Veg Pizza",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "4.0",
-                              style: TextStyle(fontFamily: 'Inder'),
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: Colors.red,
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Veg Pizza",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "4.0",
+                                style: TextStyle(fontFamily: 'Inder'),
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.red,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                    const Row(
-                      children: [
-                        Text(
-                          "Rs.150",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Rs.150",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -232,7 +250,7 @@ class ExploreList extends StatelessWidget {
                     ],
                     color: Color(0xfff6f1e7),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                height: 150.h,
+                height: 140.h,
                 width: 120.w,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -247,38 +265,44 @@ class ExploreList extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Pan Pizza",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "4.6",
-                              style: TextStyle(fontFamily: 'Inder'),
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: Colors.red,
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Pan Pizza",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "4.6",
+                                style: TextStyle(fontFamily: 'Inder'),
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.red,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                    const Row(
-                      children: [
-                        Text(
-                          "Rs.200",
-                          style: TextStyle(fontFamily: 'Inder', fontSize: 16),
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Rs.200",
+                            style: TextStyle(fontFamily: 'Inder', fontSize: 16),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),

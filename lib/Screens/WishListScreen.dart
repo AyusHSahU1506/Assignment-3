@@ -25,7 +25,7 @@ class _WishListState extends State<WishList> {
             'Wish List',
             style: TextStyle(
                 fontFamily: 'Inter',
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
                 color: Colors.black),
           ),
         ),
