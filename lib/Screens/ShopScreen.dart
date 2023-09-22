@@ -114,17 +114,7 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 20,
                   ),
-
                   const MySlider(),
-                  // Container(
-                  //   height: 170.w,
-                  //   width: MediaQuery.of(context).size.width * .85.w,
-                  //   decoration: const BoxDecoration(
-                  //       image: DecorationImage(
-                  //           image: AssetImage("assets/images/banner4.png"),
-                  //           fit: BoxFit.cover),
-                  //       borderRadius: BorderRadius.all(Radius.circular(15))),
-                  // ),
                   const SizedBox(
                     height: 20,
                   ),

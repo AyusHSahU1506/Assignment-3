@@ -26,12 +26,40 @@ class MyCartPage extends StatelessWidget {
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 30.h,
-                width: MediaQuery.of(context).size.width * 1.w,
-                decoration: const BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+              child: Column(
+                children: [
+                  Container(
+                    height: 40.h,
+                    width: MediaQuery.of(context).size.width * 1.w,
+                    decoration: const BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    "Item(s) Added",
+                    style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.blueGrey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 40.h,
+                    width: MediaQuery.of(context).size.width * 1.w,
+                    decoration: const BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
               ),
             ),
           )),
