@@ -4,6 +4,8 @@ import 'package:assignment3/utils/CategoriesList.dart';
 import 'package:assignment3/utils/FilterList.dart';
 import 'package:assignment3/utils/MenuList.dart';
 import 'package:assignment3/utils/RecommendedList.dart';
+import 'package:assignment3/widgets/BottomNavBar.dart';
+import 'package:assignment3/widgets/Location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,26 +22,7 @@ class _ShopPageState extends State<ShopPage> {
     return ScreenUtilInit(
       designSize: const Size(350, 800),
       builder: (context, child) => Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Image(
-                    image: AssetImage("assets/icons/delivery.png"), height: 30),
-                label: 'Delivery'),
-            BottomNavigationBarItem(
-              icon: Image(
-                  image: AssetImage("assets/icons/wallet.png"), height: 30),
-              label: 'Wallet',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                  image: AssetImage("assets/icons/crown.png"), height: 30),
-              label: 'Premium',
-            ),
-          ],
-        ),
+        bottomNavigationBar: const BottomNavBar(),
         backgroundColor: const Color(0xffffe7dc),
         body: SafeArea(
           child: Padding(
@@ -53,37 +36,7 @@ class _ShopPageState extends State<ShopPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Row(
-                          children: [
-                            Icon(
-                              Icons.location_on,
-                              size: 35,
-                              color: Color(0xfff43127),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 5,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Santoshi Nagar",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontFamily: 'Inter',
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    "Near Temple",
-                                    style: TextStyle(
-                                        fontFamily: 'Inder', fontSize: 14),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                        const Location(),
                         Row(
                           children: [
                             InkWell(
@@ -103,9 +56,12 @@ class _ShopPageState extends State<ShopPage> {
                             const SizedBox(
                               width: 15,
                             ),
-                            Image.asset(
-                              "assets/icons/ShoppingCart.png",
-                              height: 25,
+                            InkWell(
+                              onTap: () {},
+                              child: Image.asset(
+                                "assets/icons/ShoppingCart.png",
+                                height: 25,
+                              ),
                             ),
                             const SizedBox(
                               width: 15,
@@ -131,26 +87,7 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    child: Container(
-                      height: 40,
-                      width: MediaQuery.of(context).size.width * .85.w,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Search',
-                            hintStyle: TextStyle(fontFamily: 'Inder'),
-                            prefixIcon: Icon(Icons.search),
-                            prefixIconColor: Color(0xfff43127),
-                            suffixIcon: Icon(Icons.mic),
-                            suffixIconColor: Color(0xfff43127)),
-                      ),
-                    ),
-                  ),
+                  const SearchBar(),
                   const SizedBox(
                     height: 20,
                   ),
