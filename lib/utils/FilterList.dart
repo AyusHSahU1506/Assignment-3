@@ -29,12 +29,18 @@ class FilterList extends StatelessWidget {
                   color: Color(0xfff6f1e7),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: const Center(
-                child: Text(
-                  "Sort",
-                  style: TextStyle(
-                      fontFamily: 'Inder',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      "Sort",
+                      style: TextStyle(
+                          fontFamily: 'Inder',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Icon(Icons.arrow_drop_down)
+                  ],
                 ),
               ),
             ),

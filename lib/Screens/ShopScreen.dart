@@ -1,8 +1,10 @@
+import 'package:assignment3/Screens/CartScreen.dart';
 import 'package:assignment3/Screens/WishListScreen.dart';
 import 'package:assignment3/utils/ExploreList.dart';
 import 'package:assignment3/utils/CategoriesList.dart';
 import 'package:assignment3/utils/FilterList.dart';
 import 'package:assignment3/utils/MenuList.dart';
+import 'package:assignment3/utils/MySlider.dart';
 import 'package:assignment3/utils/RecommendedList.dart';
 import 'package:assignment3/widgets/BottomNavBar.dart';
 import 'package:assignment3/widgets/Location.dart';
@@ -57,7 +59,13 @@ class _ShopPageState extends State<ShopPage> {
                               width: 15,
                             ),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const MyCartPage()));
+                              },
                               child: Image.asset(
                                 "assets/icons/ShoppingCart.png",
                                 height: 25,
@@ -87,19 +95,36 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const SearchBar(),
+                  Container(
+                    height: 40,
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Search',
+                          hintStyle: TextStyle(fontFamily: 'Inder'),
+                          prefixIcon: Icon(Icons.search),
+                          prefixIconColor: Color(0xfff43127),
+                          suffixIcon: Icon(Icons.mic),
+                          suffixIconColor: Color(0xfff43127)),
+                    ),
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    height: 170.w,
-                    width: MediaQuery.of(context).size.width * .85.w,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/banner4.png"),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                  ),
+
+                  const MySlider(),
+                  // Container(
+                  //   height: 170.w,
+                  //   width: MediaQuery.of(context).size.width * .85.w,
+                  //   decoration: const BoxDecoration(
+                  //       image: DecorationImage(
+                  //           image: AssetImage("assets/images/banner4.png"),
+                  //           fit: BoxFit.cover),
+                  //       borderRadius: BorderRadius.all(Radius.circular(15))),
+                  // ),
                   const SizedBox(
                     height: 20,
                   ),
