@@ -38,7 +38,7 @@ class FoodiePremium extends StatelessWidget {
                             fontFamily: 'MetropolisRegular',
                             decorationThickness: 1.5,
                             letterSpacing: 10,
-                            fontSize: 60,
+                            fontSize: 52,
                             color: Color(0xffffc000),
                             fontWeight: FontWeight.bold),
                       ),

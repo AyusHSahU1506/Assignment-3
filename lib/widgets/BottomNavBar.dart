@@ -11,8 +11,6 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      // showSelectedLabels: false,
-      // showUnselectedLabels: false,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: InkWell(
