@@ -1,3 +1,5 @@
+import 'package:assignment3/Screens/ShopScreen.dart';
+import 'package:assignment3/Screens/WalletScreen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -8,18 +10,31 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      items: const <BottomNavigationBarItem>[
+      // showSelectedLabels: false,
+      // showUnselectedLabels: false,
+      items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-            icon: Image(
+          icon: InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ShopPage()));
+            },
+            child: const Image(
                 image: AssetImage("assets/icons/delivery.png"), height: 30),
-            label: 'Delivery'),
-        BottomNavigationBarItem(
-          icon: Image(image: AssetImage("assets/icons/wallet.png"), height: 30),
-          label: 'Wallet',
+          ),
+          label: 'Delivery',
         ),
         BottomNavigationBarItem(
+          icon: InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const MyWallet()));
+              },
+              child: const Image(
+                  image: AssetImage("assets/icons/wallet.png"), height: 30)),
+          label: 'Wallet',
+        ),
+        const BottomNavigationBarItem(
           icon: Image(image: AssetImage("assets/icons/crown.png"), height: 30),
           label: 'Premium',
         ),

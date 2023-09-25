@@ -24,7 +24,7 @@ class _ShopPageState extends State<ShopPage> {
     return ScreenUtilInit(
       designSize: const Size(350, 800),
       builder: (context, child) => Scaffold(
-        bottomNavigationBar: const BottomNavBar(),
+        bottomNavigationBar: BottomNavBar(),
         backgroundColor: const Color(0xffffe7dc),
         body: SafeArea(
           child: Padding(

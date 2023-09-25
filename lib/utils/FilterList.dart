@@ -1,9 +1,25 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
-class FilterList extends StatelessWidget {
+class FilterList extends StatefulWidget {
   const FilterList({
     super.key,
   });
+
+  @override
+  State<FilterList> createState() => _FilterListState();
+}
+
+class _FilterListState extends State<FilterList> {
+  String dropdownvalue = 'Sort';
+
+  List<String> items = <String>[
+    'Sort',
+    'Pizza',
+    'Burger',
+    'Biryani',
+    'South Indian',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +31,7 @@ class FilterList extends StatelessWidget {
           children: [
             Container(
               height: 30,
-              width: 100,
+              width: 130,
               decoration: const BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -28,19 +44,36 @@ class FilterList extends StatelessWidget {
                   ],
                   color: Color(0xfff6f1e7),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
-              child: const Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "Sort",
-                      style: TextStyle(
-                          fontFamily: 'Inder',
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Icon(Icons.arrow_drop_down)
-                  ],
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      DropdownButton<String>(
+                        hint: const Text("data"),
+                        value: dropdownvalue,
+                        icon: const Icon(Icons.keyboard_arrow_down),
+                        items: items.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(
+                              items,
+                              style: const TextStyle(
+                                  fontFamily: 'Inder',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          );
+                        }).toList(),
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
