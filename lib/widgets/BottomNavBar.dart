@@ -1,3 +1,4 @@
+import 'package:assignment3/Screens/FoodiePremium.dart';
 import 'package:assignment3/Screens/ShopScreen.dart';
 import 'package:assignment3/Screens/WalletScreen.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +35,16 @@ class BottomNavBar extends StatelessWidget {
                   image: AssetImage("assets/icons/wallet.png"), height: 30)),
           label: 'Wallet',
         ),
-        const BottomNavigationBarItem(
-          icon: Image(image: AssetImage("assets/icons/crown.png"), height: 30),
+        BottomNavigationBarItem(
+          icon: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FoodiePremium()));
+              },
+              child: const Image(
+                  image: AssetImage("assets/icons/crown.png"), height: 30)),
           label: 'Premium',
         ),
       ],

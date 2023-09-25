@@ -47,3 +47,6 @@ flutter:
   - family: BauhausRegular
     fonts:
       - asset: fonts/BauhausRegular.ttf
+  - family: MetropolisRegular
+    fonts:
+      - asset: fonts/Metropolis-Regular.otf
