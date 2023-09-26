@@ -13,13 +13,48 @@ class MyWallet extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 300.h,
                 width: MediaQuery.of(context).size.width.w,
                 decoration: const BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(50),
-                        bottomRight: Radius.circular(50))),
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20))),
+                child: Center(
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 100,
+                      ),
+                      Text(
+                        "WALLET",
+                        style: TextStyle(
+                            fontFamily: 'MetropolisRegular',
+                            fontSize: 50,
+                            color: Colors.blueGrey.shade50,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 10),
+                      ),
+                      const Text(
+                        "BY",
+                        style: TextStyle(
+                            fontFamily: 'MetropolisRegular',
+                            fontSize: 20,
+                            letterSpacing: 1),
+                      ),
+                      const Text(
+                        "FOODIES",
+                        style: TextStyle(
+                            fontFamily: 'MetropolisRegular',
+                            fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 1),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      )
+                    ],
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 30,
@@ -141,7 +176,6 @@ class MyWallet extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  // height: 200.h,
                   width: MediaQuery.of(context).size.width * 1.w,
                   decoration: const BoxDecoration(
                       boxShadow: [
@@ -172,13 +206,13 @@ class MyWallet extends StatelessWidget {
                           decoration: const BoxDecoration(
                               color: Colors.red,
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(30))),
+                                  BorderRadius.all(Radius.circular(15))),
                           child: const Center(
                             child: Text(
-                              "BUY NOW",
+                              "Buy Now",
                               style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 23,
+                                  fontFamily: 'MetropolisRegular',
+                                  fontSize: 22,
                                   color: Colors.white),
                             ),
                           ),

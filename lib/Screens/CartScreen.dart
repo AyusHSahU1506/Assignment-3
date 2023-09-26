@@ -105,7 +105,7 @@ class MyCartPage extends StatelessWidget {
                     height: 10,
                   ),
                   Container(
-                    height: 200.h,
+                    // height: 200.h,
                     width: MediaQuery.of(context).size.width * 1.w,
                     decoration: const BoxDecoration(
                         boxShadow: [
@@ -121,7 +121,7 @@ class MyCartPage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 10),
+                          horizontal: 20, vertical: 20),
                       child: Column(
                         children: [
                           Row(
@@ -257,7 +257,7 @@ class MyCartPage extends StatelessWidget {
                     height: 30,
                   ),
                   Container(
-                    height: 160.h,
+                    // height: 160.h,
                     width: MediaQuery.of(context).size.width * 1.w,
                     decoration: const BoxDecoration(
                       color: Color(0xfff6f1e7),
@@ -274,7 +274,7 @@ class MyCartPage extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 10),
+                          horizontal: 10, vertical: 20),
                       child: Column(
                         children: [
                           Row(
