@@ -1,4 +1,5 @@
 import 'package:assignment3/Screens/CartScreen.dart';
+import 'package:assignment3/Screens/ProfileScreen.dart';
 import 'package:assignment3/Screens/WishListScreen.dart';
 import 'package:assignment3/utils/ExploreList.dart';
 import 'package:assignment3/utils/CategoriesList.dart';
@@ -24,7 +25,7 @@ class _ShopPageState extends State<ShopPage> {
     return ScreenUtilInit(
       designSize: const Size(350, 800),
       builder: (context, child) => Scaffold(
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: const BottomNavBar(),
         backgroundColor: const Color(0xffffe7dc),
         body: SafeArea(
           child: Padding(
@@ -74,17 +75,27 @@ class _ShopPageState extends State<ShopPage> {
                             const SizedBox(
                               width: 15,
                             ),
-                            Container(
-                              height: 30,
-                              width: 30,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle, color: Colors.white),
-                              child: const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 3),
-                                child: Text("A",
-                                    style: TextStyle(
-                                        fontSize: 20, fontFamily: 'Inter'),
-                                    textAlign: TextAlign.center),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ProfileScreen()));
+                              },
+                              child: Container(
+                                height: 30,
+                                width: 30,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white),
+                                child: const Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 3),
+                                  child: Text("A",
+                                      style: TextStyle(
+                                          fontSize: 20, fontFamily: 'Inter'),
+                                      textAlign: TextAlign.center),
+                                ),
                               ),
                             )
                           ],

@@ -82,6 +82,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     decoration: InputDecoration(
                         disabledBorder: InputBorder.none,
                         hintText: "Enter Phone Number",
+                        counterText: "",
                         hintStyle: TextStyle(fontFamily: 'Inter'),
                         border: OutlineInputBorder(
                             borderRadius:
