@@ -1,5 +1,6 @@
 import 'package:assignment3/Auth/OtpScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -74,9 +75,11 @@ class _SignInScreenState extends State<SignInScreen> {
               const SizedBox(
                 height: 15,
               ),
-              const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                  child: Form(
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: SizedBox(
+                  width: w,
+                  child: const Form(
                       child: IntlPhoneField(
                     initialCountryCode: 'IN',
                     decoration: InputDecoration(
@@ -87,31 +90,39 @@ class _SignInScreenState extends State<SignInScreen> {
                         border: OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20)))),
-                  ))),
-              SizedBox(
-                width: w * .90,
-                height: h * .11,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      backgroundColor: const Color(0xfff43127),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const otpScreen(
-                                    phoneNumber: '',
-                                  )));
-                    },
-                    child: const Text(
-                      "Continue",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Inter'),
-                    )),
+                  )),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: SizedBox(
+                  width: w,
+                  height: 45,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        backgroundColor: const Color(0xfff43127),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const otpScreen(
+                                      phoneNumber: '',
+                                    )));
+                      },
+                      child: const Text(
+                        "Continue",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Inter'),
+                      )),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -147,9 +158,10 @@ class _SignInScreenState extends State<SignInScreen> {
                 height: 10,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    width: 110,
                     height: 50,
                   ),
                   Container(
@@ -199,7 +211,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: Colors.black),
-                  children: <TextSpan>[
+                  children: [
                     TextSpan(
                         text: 'Terms os Service ',
                         style: TextStyle(

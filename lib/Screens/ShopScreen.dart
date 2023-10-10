@@ -123,6 +123,10 @@ class _ShopPageState extends State<ShopPage> {
                     ),
                   ),
                   const SizedBox(
+                    height: 10,
+                  ),
+                  const CategoriesList(),
+                  const SizedBox(
                     height: 20,
                   ),
                   const MySlider(),
@@ -163,36 +167,6 @@ class _ShopPageState extends State<ShopPage> {
                         ),
                       ),
                       Text(
-                        " CATEGORIES ",
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w500),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          color: Colors.redAccent,
-                          thickness: .3,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const CategoriesList(),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          color: Colors.redAccent,
-                          thickness: .3,
-                        ),
-                      ),
-                      Text(
                         " RECOMMENDED FOR YOU ",
                         style: TextStyle(
                             fontSize: 17,
@@ -211,10 +185,6 @@ class _ShopPageState extends State<ShopPage> {
                     height: 15,
                   ),
                   const RecommendedList(),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const FilterList(),
                   const SizedBox(
                     height: 20,
                   ),
@@ -241,6 +211,7 @@ class _ShopPageState extends State<ShopPage> {
                       ),
                     ],
                   ),
+                  const FilterList(),
                   const SizedBox(
                     height: 20,
                   ),

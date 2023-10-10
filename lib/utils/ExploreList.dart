@@ -14,7 +14,7 @@ class ExploreList extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) => SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Container(
+        child: SizedBox(
           height: 200,
           child: Row(
             children: [
@@ -37,7 +37,6 @@ class ExploreList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      child: Image.asset("assets/images/VegBurger.png"),
                       height: 100,
                       width: MediaQuery.of(context).size.width.w,
                       decoration: const BoxDecoration(
@@ -45,6 +44,7 @@ class ExploreList extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
+                      child: Image.asset("assets/images/VegBurger.png"),
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5),

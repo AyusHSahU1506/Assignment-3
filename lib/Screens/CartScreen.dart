@@ -62,7 +62,7 @@ class MyCartPage extends StatelessWidget {
                           text: const TextSpan(
                             text: 'Delivery In ',
                             style: TextStyle(
-                                fontFamily: 'Inder',
+                                fontFamily: 'MetropolisRegular',
                                 fontSize: 16,
                                 color: Colors.black),
                             children: <TextSpan>[
@@ -130,7 +130,8 @@ class MyCartPage extends StatelessWidget {
                               const Text(
                                 "Pizza",
                                 style: TextStyle(
-                                    fontFamily: 'BauhausRegular', fontSize: 25),
+                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontSize: 25),
                               ),
                               Row(
                                 children: [
@@ -148,7 +149,7 @@ class MyCartPage extends StatelessWidget {
                                   const Text(
                                     "Rs. 100",
                                     style: TextStyle(
-                                        fontFamily: 'BauhausRegular',
+                                        fontFamily: 'MetropolisRegularRegular',
                                         fontSize: 25),
                                   ),
                                 ],
@@ -165,7 +166,8 @@ class MyCartPage extends StatelessWidget {
                               const Text(
                                 "Burger",
                                 style: TextStyle(
-                                    fontFamily: 'BauhausRegular', fontSize: 25),
+                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontSize: 25),
                               ),
                               Row(
                                 children: [
@@ -183,7 +185,7 @@ class MyCartPage extends StatelessWidget {
                                   const Text(
                                     "Rs. 110",
                                     style: TextStyle(
-                                        fontFamily: 'BauhausRegular',
+                                        fontFamily: 'MetropolisRegularRegular',
                                         fontSize: 25),
                                   ),
                                 ],
@@ -217,7 +219,8 @@ class MyCartPage extends StatelessWidget {
                                     Text(
                                       "Add More Items(s)",
                                       style: TextStyle(
-                                          fontFamily: 'Inder', fontSize: 20),
+                                          fontFamily: 'MetropolisRegular',
+                                          fontSize: 20),
                                     ),
                                   ],
                                 ),
@@ -240,12 +243,14 @@ class MyCartPage extends StatelessWidget {
                               Text(
                                 "Total",
                                 style: TextStyle(
-                                    fontFamily: 'Bauhausregular', fontSize: 25),
+                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontSize: 25),
                               ),
                               Text(
                                 "Rs. 210",
                                 style: TextStyle(
-                                    fontFamily: 'Bauhausregular', fontSize: 25),
+                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontSize: 25),
                               ),
                             ],
                           ),
@@ -344,7 +349,7 @@ class MyCartPage extends StatelessWidget {
                               Text(
                                 "Change",
                                 style: TextStyle(
-                                    fontFamily: 'Inder',
+                                    fontFamily: 'MetropolisRegular',
                                     fontSize: 16,
                                     color: Colors.red),
                               )

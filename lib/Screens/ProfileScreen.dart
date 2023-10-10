@@ -1,38 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
+// ignore_for_file: library_private_types_in_public_api
 
-// class ProfileScreen extends StatelessWidget {
-//   const ProfileScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return ScreenUtilInit(
-//       child: Scaffold(
-//         backgroundColor: const Color(0xffffe7dc),
-//         body: SingleChildScrollView(
-//           child: SafeArea(
-//             child: Padding(
-//               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-//               child: Column(
-//                 children: [
-//                   Container(
-//                     height: 100,
-//                     width: MediaQuery.of(context).size.width.w,
-//                     decoration: const BoxDecoration(
-//                         color: Colors.red,
-//                         borderRadius: BorderRadius.all(Radius.circular(20))
-// ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

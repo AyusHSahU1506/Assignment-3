@@ -51,7 +51,6 @@ class _FilterListState extends State<FilterList> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       DropdownButton<String>(
-                        hint: const Text("data"),
                         value: dropdownvalue,
                         icon: const Icon(Icons.keyboard_arrow_down),
                         items: items.map((String items) {
@@ -60,7 +59,7 @@ class _FilterListState extends State<FilterList> {
                             child: Text(
                               items,
                               style: const TextStyle(
-                                  fontFamily: 'Inder',
+                                  fontFamily: 'MetropolisRegular',
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500),
                             ),
@@ -99,7 +98,7 @@ class _FilterListState extends State<FilterList> {
                 child: Text(
                   "4+",
                   style: TextStyle(
-                      fontFamily: 'Inder',
+                      fontFamily: 'MetropolisRegular',
                       fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),
@@ -127,7 +126,7 @@ class _FilterListState extends State<FilterList> {
                 child: Text(
                   "Veg",
                   style: TextStyle(
-                      fontFamily: 'Inder',
+                      fontFamily: 'MetropolisRegular',
                       fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),
@@ -155,7 +154,7 @@ class _FilterListState extends State<FilterList> {
                 child: Text(
                   "Non Veg",
                   style: TextStyle(
-                      fontFamily: 'Inder',
+                      fontFamily: 'MetropolisRegular',
                       fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),
@@ -183,7 +182,7 @@ class _FilterListState extends State<FilterList> {
                 child: Text(
                   "Nearest",
                   style: TextStyle(
-                      fontFamily: 'Inder',
+                      fontFamily: 'MetropolisRegular',
                       fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),

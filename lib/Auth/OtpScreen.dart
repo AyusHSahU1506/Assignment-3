@@ -14,6 +14,7 @@ class otpScreen extends StatefulWidget {
 }
 
 class _OTPPageState extends State<otpScreen> {
+  TextEditingController otpController = TextEditingController();
   FocusNode firstDigitFocusNode = FocusNode();
   FocusNode secondDigitFocusNode = FocusNode();
   FocusNode thirdDigitFocusNode = FocusNode();
@@ -67,6 +68,7 @@ class _OTPPageState extends State<otpScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                 child: OTPTextField(
+                  controller: OtpFieldController(),
                   fieldStyle: FieldStyle.box,
                   otpFieldStyle: OtpFieldStyle(
                     focusBorderColor: Colors.black,
@@ -115,10 +117,22 @@ class _OTPPageState extends State<otpScreen> {
               ),
               ElevatedButton(
                 onPressed: () {
+                  // String enteredOTP = otpController.text;
+                  // if (enteredOTP.length == 6) {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ShopPage()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ShopPage(),
+                    ),
+                  );
+                  // }
+                  //else {
+                  //   ScaffoldMessenger.of(context).showSnackBar(
+                  //     const SnackBar(
+                  //       content: Text('Please enter a valid 6-digit OTP.'),
+                  //     ),
+                  //   );
+                  // }
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xfff43127),
