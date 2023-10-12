@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:assignment3/Screens/ShopScreen.dart';
+import 'package:assignment3/widgets/BottomNavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:otp_text_field/otp_text_field.dart';
@@ -122,7 +123,7 @@ class _OTPPageState extends State<otpScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ShopPage(),
+                      builder: (context) => const BottomNavBar(),
                     ),
                   );
                   // }

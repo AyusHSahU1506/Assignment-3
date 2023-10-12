@@ -15,8 +15,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController numberController = TextEditingController();
 
-  String name = "John Doe";
-  String email = "johndoe@example.com";
+  String name = "Ayush";
+  String email = "ayushsahu@gmail.com";
   String number = "1234567890";
 
   @override
@@ -62,56 +62,64 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 120,
-                            height: 110,
+                            width: 90.w,
                             decoration: BoxDecoration(
-                                border: Border.all(), shape: BoxShape.circle),
+                                border: Border.all(width: .2),
+                                shape: BoxShape.circle),
                             child: Image.asset("assets/icons/user.png"),
                           ),
+                          const SizedBox(
+                            width: 15,
+                          ),
                           Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                height: 50,
-                                width: 200,
-                                decoration: const BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(20))),
-                                child: const Center(
-                                  child: Text(
-                                    "Upload Image from Gallery",
-                                    style: TextStyle(
-                                        fontFamily: 'MetropolisRegular',
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
-                                  ),
+                              const Text(
+                                "Ayush",
+                                style: TextStyle(
+                                  fontFamily: 'MetropolisRegular',
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
-                              Container(
-                                height: 50,
-                                width: 200,
-                                decoration: const BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(20))),
-                                child: const Center(
-                                  child: Text(
-                                    "Upload Image from Camera",
-                                    style: TextStyle(
-                                        fontFamily: 'MetropolisRegular',
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
-                                  ),
+                              const Text(
+                                "View Profile",
+                                style: TextStyle(
+                                  color: Colors.redAccent,
+                                  fontFamily: 'MetropolisRegular',
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
+                              const SizedBox(height: 10),
+                              Container(
+                                decoration: const BoxDecoration(
+                                    color: Colors.redAccent,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10))),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "32% completed",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'MetropolisRegular',
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              )
                             ],
                           )
                         ],
