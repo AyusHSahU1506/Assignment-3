@@ -1,324 +1,3 @@
-// // import 'package:flutter/material.dart';
-// // import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-// // class Paymentmethods extends StatelessWidget {
-// //   const Paymentmethods({super.key});
-
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return ScreenUtilInit(
-// //       child: Scaffold(
-// //         backgroundColor: const Color(0xffffe7dc),
-// //         appBar: AppBar(
-// //           backgroundColor: const Color(0xffffe7dc),
-// //           iconTheme: const IconThemeData(
-// //             color: Colors.black,
-// //           ),
-// //           elevation: 0,
-// //           title: const Text(
-// //             'Pay Using',
-// //             style: TextStyle(
-// //                 fontFamily: 'MetropolisRegular',
-// //                 fontWeight: FontWeight.w500,
-// //                 color: Colors.black),
-// //           ),
-// //         ),
-// //         body: SingleChildScrollView(
-// //           child: Padding(
-// //             padding: const EdgeInsets.symmetric(horizontal: 10),
-// //             child: Column(
-// //               children: [
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 const Row(
-// //                   children: [
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                     Text(
-// //                       "  UPI  ",
-// //                       style: TextStyle(
-// //                           fontFamily: 'MetropolisRegular',
-// //                           fontSize: 20,
-// //                           fontWeight: FontWeight.w500),
-// //                     ),
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                   ],
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 const Row(
-// //                   children: [
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                     Text(
-// //                       "  CARDS  ",
-// //                       style: TextStyle(
-// //                           fontFamily: 'MetropolisRegular',
-// //                           fontSize: 20,
-// //                           fontWeight: FontWeight.w500),
-// //                     ),
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                   ],
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 const Row(
-// //                   children: [
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                     Text(
-// //                       "  WALLETS  ",
-// //                       style: TextStyle(
-// //                           fontFamily: 'MetropolisRegular',
-// //                           fontSize: 20,
-// //                           fontWeight: FontWeight.w500),
-// //                     ),
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                   ],
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 200.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 const Row(
-// //                   children: [
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                     Text(
-// //                       "  NET BANKING  ",
-// //                       style: TextStyle(
-// //                           fontFamily: 'MetropolisRegular',
-// //                           fontSize: 20,
-// //                           fontWeight: FontWeight.w500),
-// //                     ),
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                   ],
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 const Row(
-// //                   children: [
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                     Text(
-// //                       "  PAY ON DELIVERY  ",
-// //                       style: TextStyle(
-// //                           fontFamily: 'MetropolisRegular',
-// //                           fontSize: 20,
-// //                           fontWeight: FontWeight.w500),
-// //                     ),
-// //                     Expanded(
-// //                       child: Divider(
-// //                         thickness: .5,
-// //                         color: Colors.grey,
-// //                       ),
-// //                     ),
-// //                   ],
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //                 Container(
-// //                   height: 50.h,
-// //                   width: MediaQuery.of(context).size.width * 1.w,
-// //                   decoration: const BoxDecoration(
-// //                       boxShadow: [
-// //                         BoxShadow(
-// //                             color: Colors.grey,
-// //                             blurRadius: 3.0,
-// //                             offset: Offset(
-// //                               0.0,
-// //                               5.0,
-// //                             ))
-// //                       ],
-// //                       color: Color(0xfff6f1e7),
-// //                       borderRadius: BorderRadius.all(Radius.circular(10))),
-// //                 ),
-// //                 const SizedBox(
-// //                   height: 10,
-// //                 ),
-// //               ],
-// //             ),
-// //           ),
-// //         ),
-// //       ),
-// //     );
-// //   }
-// // }
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -360,6 +39,14 @@ class Paymentmethods extends StatelessWidget {
               ),
               _buildPaymentMethod(
                 icon: Icons.account_balance_wallet,
+                title: 'Foodies Wallet',
+                description: 'Use your Foodies wallet for payments.',
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              _buildPaymentMethod(
+                icon: Icons.account_balance_wallet,
                 title: 'Wallets',
                 description: 'Use your digital wallet for payments.',
               ),
@@ -393,10 +80,52 @@ class Paymentmethods extends StatelessWidget {
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(16.0),
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              side: const BorderSide(width: .2),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
             onPressed: () {
-              print('Button pressed');
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    backgroundColor: const Color(0xfff6f1e7),
+                    title: const Text(
+                      'Order Confirmed',
+                      style: TextStyle(
+                          fontFamily: 'MetropolisRegular',
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    content: const Text(
+                      'Your order has been placed!',
+                      style: TextStyle(
+                          fontFamily: 'MetropolisRegular',
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    actions: <Widget>[
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text('OK'),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
-            child: const Text('Place Order'),
+            child: const Text(
+              'Place Order',
+              style: TextStyle(
+                  fontFamily: 'MetropolisRegular',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ),
       ),
@@ -418,7 +147,7 @@ class Paymentmethods extends StatelessWidget {
             offset: const Offset(0.0, 5.0),
           ),
         ],
-        color: Color(0xffF6F1E7),
+        color: const Color(0xffF6F1E7),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(

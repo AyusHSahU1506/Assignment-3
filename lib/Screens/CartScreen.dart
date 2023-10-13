@@ -21,7 +21,7 @@ class MyCartPage extends StatelessWidget {
             title: const Text(
               'Cart',
               style: TextStyle(
-                  fontFamily: 'Inter',
+                  fontFamily: 'MetropolisRegular',
                   fontWeight: FontWeight.w500,
                   color: Colors.black),
             ),
@@ -89,7 +89,7 @@ class MyCartPage extends StatelessWidget {
                       Text(
                         "  Item(s) Added  ",
                         style: TextStyle(
-                          fontFamily: 'Inter',
+                          fontFamily: 'MetropolisRegular',
                           fontSize: 20,
                           fontWeight: FontWeight.w300,
                         ),
@@ -130,7 +130,7 @@ class MyCartPage extends StatelessWidget {
                               const Text(
                                 "Pizza",
                                 style: TextStyle(
-                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontFamily: 'MetropolisRegular',
                                     fontSize: 25),
                               ),
                               Row(
@@ -149,7 +149,7 @@ class MyCartPage extends StatelessWidget {
                                   const Text(
                                     "Rs. 100",
                                     style: TextStyle(
-                                        fontFamily: 'MetropolisRegularRegular',
+                                        fontFamily: 'MetropolisRegular',
                                         fontSize: 25),
                                   ),
                                 ],
@@ -166,7 +166,7 @@ class MyCartPage extends StatelessWidget {
                               const Text(
                                 "Burger",
                                 style: TextStyle(
-                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontFamily: 'MetropolisRegular',
                                     fontSize: 25),
                               ),
                               Row(
@@ -185,7 +185,7 @@ class MyCartPage extends StatelessWidget {
                                   const Text(
                                     "Rs. 110",
                                     style: TextStyle(
-                                        fontFamily: 'MetropolisRegularRegular',
+                                        fontFamily: 'MetropolisRegular',
                                         fontSize: 25),
                                   ),
                                 ],
@@ -243,13 +243,13 @@ class MyCartPage extends StatelessWidget {
                               Text(
                                 "Total",
                                 style: TextStyle(
-                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontFamily: 'MetropolisRegular',
                                     fontSize: 25),
                               ),
                               Text(
                                 "Rs. 210",
                                 style: TextStyle(
-                                    fontFamily: 'MetropolisRegularRegular',
+                                    fontFamily: 'MetropolisRegular',
                                     fontSize: 25),
                               ),
                             ],
@@ -286,7 +286,7 @@ class MyCartPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Container(
-                                height: 50,
+                                height: 50.h,
                                 width: 150.w,
                                 decoration: BoxDecoration(
                                     border: Border.all(),
@@ -304,7 +304,7 @@ class MyCartPage extends StatelessWidget {
                                     child: const Text(
                                       "Pay Using ",
                                       style: TextStyle(
-                                          fontFamily: 'Inter',
+                                          fontFamily: 'MetropolisRegular',
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black),
@@ -312,21 +312,56 @@ class MyCartPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Container(
-                                height: 50,
-                                width: 150.w,
-                                decoration: const BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10))),
-                                child: const Center(
-                                  child: Text(
-                                    "Place Order",
-                                    style: TextStyle(
-                                        fontFamily: 'Inter',
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                              InkWell(
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        backgroundColor:
+                                            const Color(0xfff6f1e7),
+                                        title: const Text(
+                                          'Order Confirmed',
+                                          style: TextStyle(
+                                              fontFamily: 'MetropolisRegular',
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        content: const Text(
+                                          'Your order has been placed!',
+                                          style: TextStyle(
+                                              fontFamily: 'MetropolisRegular',
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Done'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: Container(
+                                  height: 50.h,
+                                  width: 150.w,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.red,
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  child: const Center(
+                                    child: Text(
+                                      "Place Order",
+                                      style: TextStyle(
+                                          fontFamily: 'MetropolisRegular',
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
                                   ),
                                 ),
                               ),
