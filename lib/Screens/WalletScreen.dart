@@ -87,13 +87,13 @@ class MyWallet extends StatelessWidget {
                             Text(
                               "Wallet Bal.",
                               style: TextStyle(
-                                  fontFamily: 'Inder',
+                                  fontFamily: 'MetropolisRegular',
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20),
                             ),
                             Text("Rs. 0",
                                 style: TextStyle(
-                                    fontFamily: 'Inder',
+                                    fontFamily: 'MetropolisRegular',
                                     fontWeight: FontWeight.w500,
                                     fontSize: 20))
                           ],
@@ -107,12 +107,12 @@ class MyWallet extends StatelessWidget {
                           children: [
                             Text("Gift Card Bal.",
                                 style: TextStyle(
-                                    fontFamily: 'Inder',
+                                    fontFamily: 'MetropolisRegular',
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20)),
                             Text("Rs. 0",
                                 style: TextStyle(
-                                    fontFamily: 'Inder',
+                                    fontFamily: 'MetropolisRegular',
                                     fontWeight: FontWeight.w500,
                                     fontSize: 20))
                           ],
@@ -126,12 +126,12 @@ class MyWallet extends StatelessWidget {
                           children: [
                             Text("Credits",
                                 style: TextStyle(
-                                    fontFamily: 'Inder',
+                                    fontFamily: 'MetropolisRegular',
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20)),
                             Text("Rs. 0",
                                 style: TextStyle(
-                                    fontFamily: 'Inder',
+                                    fontFamily: 'MetropolisRegular',
                                     fontWeight: FontWeight.w500,
                                     fontSize: 20))
                           ],
@@ -157,7 +157,7 @@ class MyWallet extends StatelessWidget {
                     Text(
                       "  GIFT CARDS  ",
                       style: TextStyle(
-                          fontFamily: 'Inter',
+                          fontFamily: 'MetropolisRegular',
                           fontSize: 20,
                           fontWeight: FontWeight.w500),
                     ),

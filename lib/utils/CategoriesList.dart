@@ -1,209 +1,83 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CategoriesList extends StatelessWidget {
   const CategoriesList({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: SizedBox(
-        height: 50,
+    return SizedBox(
+      height: 55,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          _buildCategory(
+            icon: 'assets/icons/ramen.png',
+            title: 'Ramen',
+            count: '5',
+          ),
+          _buildCategory(
+            icon: 'assets/icons/pizza.png',
+            title: 'Pizza',
+            count: '9',
+          ),
+          _buildCategory(
+            icon: 'assets/icons/burger.png',
+            title: 'Burger',
+            count: '18',
+          ),
+          _buildCategory(
+            icon: 'assets/icons/Fries.png',
+            title: 'French Fries',
+            count: '14',
+          ),
+          _buildCategory(
+            icon: 'assets/icons/FastFood.png',
+            title: 'Fast Food',
+            count: '10',
+          ),
+          _buildCategory(
+            icon: 'assets/icons/SoftDrink.png',
+            title: 'Soft Drink',
+            count: '28',
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildCategory({
+    required String icon,
+    required String title,
+    required String count,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: 150.w,
+        decoration: const BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 3.0,
+              offset: Offset(0.0, 0.0),
+            ),
+          ],
+          color: Color(0xfff6f1e7),
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+        ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              height: 30,
-              width: 150,
-              decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 3.0,
-                        offset: Offset(
-                          0.0,
-                          5.0,
-                        ))
-                  ],
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Image.asset(
-                      "assets/icons/ramen.png",
-                    ),
-                  ),
-                  const Text(
-                    "Ramen(5)",
-                    style: TextStyle(fontFamily: 'Inder'),
-                  ),
-                ],
-              ),
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Image.asset(icon),
             ),
-            const SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 30,
-              width: 150,
-              decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 3.0,
-                        offset: Offset(
-                          0.0,
-                          5.0,
-                        ))
-                  ],
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Image.asset("assets/icons/pizza.png"),
-                  ),
-                  const Text(
-                    "pizza(9)",
-                    style: TextStyle(fontFamily: 'Inder'),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 30,
-              width: 150,
-              decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 3.0,
-                        offset: Offset(
-                          0.0,
-                          5.0,
-                        ))
-                  ],
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Image.asset("assets/icons/burger.png"),
-                  ),
-                  const Text(
-                    "Burger(18)",
-                    style: TextStyle(fontFamily: 'Inder'),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 30,
-              width: 150,
-              decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 3.0,
-                        offset: Offset(
-                          0.0,
-                          5.0,
-                        ))
-                  ],
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Image.asset("assets/icons/Fries.png"),
-                  ),
-                  const Text(
-                    "French Fries(14)",
-                    style: TextStyle(fontFamily: 'Inder'),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 30,
-              width: 150,
-              decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 3.0,
-                        offset: Offset(
-                          0.0,
-                          5.0,
-                        ))
-                  ],
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Image.asset("assets/icons/FastFood.png"),
-                  ),
-                  const Text(
-                    "Fast Food(10)",
-                    style: TextStyle(fontFamily: 'Inder'),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Container(
-              height: 30,
-              width: 150,
-              decoration: const BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 3.0,
-                        offset: Offset(
-                          0.0,
-                          5.0,
-                        ))
-                  ],
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Image.asset("assets/icons/SoftDrink.png"),
-                  ),
-                  const Text(
-                    "Soft Drink(28)",
-                    style: TextStyle(fontFamily: 'Inder'),
-                  ),
-                ],
-              ),
+            Text(
+              '$title($count)',
+              style: const TextStyle(fontFamily: 'MetropolisRegular'),
             ),
           ],
         ),

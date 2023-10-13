@@ -1,5 +1,4 @@
 // ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -109,13 +108,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "View Activity",
-                              style: TextStyle(
-                                color: Colors.redAccent,
-                                fontFamily: 'MetropolisRegular',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
+                            InkWell(
+                              onTap: () {},
+                              child: const Text(
+                                "View Profile",
+                                style: TextStyle(
+                                  color: Colors.redAccent,
+                                  fontFamily: 'MetropolisRegular',
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 10),
