@@ -110,7 +110,6 @@ class ExploreList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      child: Image.asset("assets/images/ItalianPizza.png"),
                       height: 100,
                       width: MediaQuery.of(context).size.width.w,
                       decoration: const BoxDecoration(
@@ -118,6 +117,7 @@ class ExploreList extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
+                      child: Image.asset("assets/images/ItalianPizza.png"),
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5),
@@ -183,7 +183,6 @@ class ExploreList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      child: Image.asset("assets/images/NewYorkPizza.png"),
                       height: 100,
                       width: MediaQuery.of(context).size.width.w,
                       decoration: const BoxDecoration(
@@ -191,6 +190,7 @@ class ExploreList extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
+                      child: Image.asset("assets/images/NewYorkPizza.png"),
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5),
@@ -256,7 +256,6 @@ class ExploreList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      child: Image.asset("assets/images/SushiPizza.png"),
                       height: 100,
                       width: MediaQuery.of(context).size.width.w,
                       decoration: const BoxDecoration(
@@ -264,6 +263,7 @@ class ExploreList extends StatelessWidget {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10))),
+                      child: Image.asset("assets/images/SushiPizza.png"),
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5),

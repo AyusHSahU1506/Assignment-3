@@ -7,7 +7,6 @@ import 'package:assignment3/utils/FilterList.dart';
 import 'package:assignment3/utils/MenuList.dart';
 import 'package:assignment3/utils/MySlider.dart';
 import 'package:assignment3/utils/RecommendedList.dart';
-import 'package:assignment3/widgets/BottomNavBar.dart';
 import 'package:assignment3/widgets/Location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,6 +1,4 @@
-import 'dart:ui';
 
-import 'package:assignment3/Screens/ShopScreen.dart';
 import 'package:assignment3/widgets/BottomNavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

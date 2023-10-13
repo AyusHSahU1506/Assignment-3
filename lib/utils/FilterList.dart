@@ -25,7 +25,7 @@ class _FilterListState extends State<FilterList> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Container(
+      child: SizedBox(
         height: 50,
         child: Row(
           children: [
