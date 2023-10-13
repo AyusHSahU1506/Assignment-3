@@ -182,7 +182,7 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 15,
                   ),
-                  const RecommendedList(),
+                  RecommendedList(),
                   const SizedBox(
                     height: 20,
                   ),

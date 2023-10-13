@@ -123,7 +123,6 @@ class ExploreList extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 10),
             ],
           );
         },

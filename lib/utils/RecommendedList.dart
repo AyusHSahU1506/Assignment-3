@@ -2,50 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecommendedList extends StatelessWidget {
-  const RecommendedList({
+  RecommendedList({
     super.key,
   });
 
+  final List<String> imageAssets = [
+    "assets/images/banner1.png",
+    "assets/images/banner2.png",
+    "assets/images/banner3.png",
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          Container(
-              height: 150.h,
-              width: 300.w,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/banner1.png"),
-                      fit: BoxFit.cover),
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(10)))),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-              height: 150.h,
-              width: 300.w,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/banner2.png"),
-                      fit: BoxFit.cover),
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(10)))),
-          const SizedBox(
-            width: 10,
-          ),
-          Container(
-              height: 150.h,
-              width: 300.w,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/banner3.png"),
-                      fit: BoxFit.cover),
-                  color: Color(0xfff6f1e7),
-                  borderRadius: BorderRadius.all(Radius.circular(10)))),
-        ],
+    return SizedBox(
+      height: 150.h,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: imageAssets.length,
+        itemBuilder: (context, index) {
+          return Container(
+            height: 150.h,
+            width: 300.w,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(imageAssets[index]),
+                fit: BoxFit.cover,
+              ),
+              color: const Color(0xfff6f1e7),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+            ),
+          );
+        },
       ),
     );
   }
