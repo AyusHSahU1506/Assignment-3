@@ -209,7 +209,7 @@ class _ShopPageState extends State<ShopPage> {
                       ),
                     ],
                   ),
-                  const FilterList(),
+                  FilterList(),
                   const SizedBox(
                     height: 20,
                   ),

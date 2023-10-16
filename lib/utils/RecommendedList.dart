@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecommendedList extends StatelessWidget {
   RecommendedList({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   final List<String> imageAssets = [
     "assets/images/banner1.png",
@@ -20,18 +20,21 @@ class RecommendedList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: imageAssets.length,
         itemBuilder: (context, index) {
-          return Container(
-            height: 150.h,
-            width: 300.w,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(imageAssets[index]),
-                fit: BoxFit.cover,
+          return Row(children: [
+            Container(
+              height: 150.h,
+              width: 300.w,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(imageAssets[index]),
+                  fit: BoxFit.cover,
+                ),
+                color: const Color(0xfff6f1e7),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
               ),
-              color: const Color(0xfff6f1e7),
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
-          );
+            SizedBox(width: 20.w),
+          ]);
         },
       ),
     );
