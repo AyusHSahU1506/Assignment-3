@@ -2,48 +2,58 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CategoriesList extends StatelessWidget {
-  const CategoriesList({
+  CategoriesList({
     Key? key,
   }) : super(key: key);
+
+  final List<Map<String, String>> categories = [
+    {
+      'icon': 'assets/icons/ramen.png',
+      'title': 'Ramen',
+      'count': '5',
+    },
+    {
+      'icon': 'assets/icons/pizza.png',
+      'title': 'Pizza',
+      'count': '9',
+    },
+    {
+      'icon': 'assets/icons/burger.png',
+      'title': 'Burger',
+      'count': '18',
+    },
+    {
+      'icon': 'assets/icons/Fries.png',
+      'title': 'French Fries',
+      'count': '14',
+    },
+    {
+      'icon': 'assets/icons/FastFood.png',
+      'title': 'Fast Food',
+      'count': '10',
+    },
+    {
+      'icon': 'assets/icons/SoftDrink.png',
+      'title': 'Soft Drink',
+      'count': '28',
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 55,
+      height: 50.h,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: [
-          _buildCategory(
-            icon: 'assets/icons/ramen.png',
-            title: 'Ramen',
-            count: '5',
-          ),
-          _buildCategory(
-            icon: 'assets/icons/pizza.png',
-            title: 'Pizza',
-            count: '9',
-          ),
-          _buildCategory(
-            icon: 'assets/icons/burger.png',
-            title: 'Burger',
-            count: '18',
-          ),
-          _buildCategory(
-            icon: 'assets/icons/Fries.png',
-            title: 'French Fries',
-            count: '14',
-          ),
-          _buildCategory(
-            icon: 'assets/icons/FastFood.png',
-            title: 'Fast Food',
-            count: '10',
-          ),
-          _buildCategory(
-            icon: 'assets/icons/SoftDrink.png',
-            title: 'Soft Drink',
-            count: '28',
-          ),
-        ],
+        children: categories
+            .map(
+              (category) => _buildCategory(
+                icon: category['icon']!,
+                title: category['title']!,
+                count: category['count']!,
+              ),
+            )
+            .toList(),
       ),
     );
   }

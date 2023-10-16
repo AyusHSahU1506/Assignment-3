@@ -123,7 +123,7 @@ class _ShopPageState extends State<ShopPage> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const CategoriesList(),
+                  CategoriesList(),
                   const SizedBox(
                     height: 20,
                   ),
