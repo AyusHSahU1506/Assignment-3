@@ -62,7 +62,6 @@ class MyWallet extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  // height: 200.h,
                   width: MediaQuery.of(context).size.width * 1.w,
                   decoration: const BoxDecoration(
                       boxShadow: [
@@ -75,8 +74,7 @@ class MyWallet extends StatelessWidget {
                             ))
                       ],
                       color: Color(0xfff6f1e7),
-                      borderRadius: BorderRadius.all(Radius.circular(30))),
-                  // height: 200.h,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                     child: Column(
@@ -188,37 +186,43 @@ class MyWallet extends StatelessWidget {
                             ))
                       ],
                       color: Color(0xfff6f1e7),
-                      borderRadius: BorderRadius.all(Radius.circular(30))),
-                  // height: 200.h,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 10),
-                    child: Column(
-                      children: [
-                        Container(height: 100),
-                        const Divider(
-                          thickness: .5,
-                          color: Colors.grey,
-                        ),
-                        Container(
-                          height: 50,
-                          width: 150,
-                          decoration: const BoxDecoration(
-                              color: Colors.red,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15))),
-                          child: const Center(
-                            child: Text(
-                              "Buy Now",
-                              style: TextStyle(
-                                  fontFamily: 'MetropolisRegular',
-                                  fontSize: 22,
-                                  color: Colors.white),
-                            ),
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 100,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  "assets/images/walletcard.png",
+                                ))),
+                      ),
+                      SizedBox(
+                        height: 5.h,
+                      ),
+                      Container(
+                        height: 40,
+                        width: 140,
+                        decoration: const BoxDecoration(
+                            color: Colors.red,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
+                        child: const Center(
+                          child: Text(
+                            "Buy Now",
+                            style: TextStyle(
+                                fontFamily: 'MetropolisRegular',
+                                fontSize: 22,
+                                color: Colors.white),
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      )
+                    ],
                   ),
                 ),
               ),

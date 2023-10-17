@@ -40,20 +40,6 @@ class _ShopPageState extends State<ShopPage> {
                         const Location(),
                         Row(
                           children: [
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const WishList()));
-                              },
-                              child: const Icon(
-                                Icons.favorite,
-                                color: Colors.red,
-                                size: 30,
-                              ),
-                            ),
                             const SizedBox(
                               width: 15,
                             ),

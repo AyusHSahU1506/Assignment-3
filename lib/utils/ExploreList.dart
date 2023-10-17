@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ExploreList extends StatelessWidget {
-  ExploreList({
+class ExploreList extends StatefulWidget {
+  const ExploreList({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<ExploreList> createState() => _ExploreListState();
+}
+
+class _ExploreListState extends State<ExploreList> {
+  bool isFavorite = false;
   final List<Map<String, dynamic>> items = [
     {
       'image': 'VegBurger',
@@ -36,7 +42,7 @@ class ExploreList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 160.h,
+      height: 170.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: items.length,
@@ -45,7 +51,7 @@ class ExploreList extends StatelessWidget {
           return Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Container(
                   decoration: const BoxDecoration(
                     boxShadow: [
@@ -59,66 +65,84 @@ class ExploreList extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                   width: 120.w,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  child: Stack(
                     children: [
-                      Container(
-                        height: 100,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: const BoxDecoration(
-                          color: Color(0xfff6f1e7),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                          ),
-                        ),
-                        child:
-                            Image.asset('assets/images/${item['image']}.png'),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              item['title'],
-                              style: const TextStyle(
-                                  fontFamily: 'MetropolisRegular',
-                                  fontSize: 16),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 100.h,
+                            width: MediaQuery.of(context).size.width,
+                            decoration: const BoxDecoration(
+                              color: Color(0xfff6f1e7),
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                              ),
                             ),
-                            Row(
+                            child: Image.asset(
+                                'assets/images/${item['image']}.png'),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 5.h),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  item['rating'],
+                                  item['title'],
                                   style: const TextStyle(
-                                      fontFamily: 'MetropolisRegular'),
+                                      fontFamily: 'MetropolisRegular',
+                                      fontSize: 16),
                                 ),
-                                const Icon(
-                                  Icons.star,
-                                  color: Colors.red,
-                                  size: 20,
+                                Row(
+                                  children: [
+                                    Text(
+                                      item['rating'],
+                                      style: const TextStyle(
+                                          fontFamily: 'MetropolisRegular'),
+                                    ),
+                                    const Icon(
+                                      Icons.star,
+                                      color: Colors.red,
+                                      size: 20,
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Row(
-                          children: [
-                            Text(
-                              item['price'],
-                              style: const TextStyle(
-                                  fontFamily: 'MetropolisRegular',
-                                  fontSize: 16),
+                          ),
+                          SizedBox(
+                            height: 5.h,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
+                            child: Row(
+                              children: [
+                                Text(
+                                  item['price'],
+                                  style: const TextStyle(
+                                      fontFamily: 'MetropolisRegular',
+                                      fontSize: 16),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                      )
+                          )
+                        ],
+                      ),
+                      Positioned(
+                          top: 5,
+                          right: 5,
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                isFavorite = !isFavorite;
+                              });
+                            },
+                            child: Icon(
+                              Icons.favorite,
+                              color: isFavorite ? Colors.white : Colors.red,
+                            ),
+                          )),
                     ],
                   ),
                 ),

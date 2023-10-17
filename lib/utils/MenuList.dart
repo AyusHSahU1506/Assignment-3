@@ -46,7 +46,7 @@ class _MenuListState extends State<MenuList> {
     ];
 
     return SizedBox(
-      height: MediaQuery.of(context).size.height.h * 1.9,
+      height: MediaQuery.of(context).size.height.h * 2,
       child: ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
         itemCount: menuItems.length,
@@ -85,6 +85,7 @@ class MenuItemCard extends StatefulWidget {
 
 class _MenuItemCardState extends State<MenuItemCard> {
   bool isFavorite = false;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -138,7 +139,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
                         Icons.favorite,
                         color: isFavorite ? Colors.white : Colors.red,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -176,11 +177,69 @@ class _MenuItemCardState extends State<MenuItemCard> {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              backgroundColor: const Color(0xffffe7dc),
+                              title: const Text(
+                                "Added to Cart",
+                                style:
+                                    TextStyle(fontFamily: 'MetropolisRegular'),
+                              ),
+                              content: Text(
+                                "You have added ${widget.menuItem.name} to your cart.",
+                                style: const TextStyle(
+                                    fontFamily: 'MetropolisRegular'),
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: const Text(
+                                    "Done",
+                                    style: TextStyle(
+                                        fontFamily: 'MetropolisRegular',
+                                        color: Colors.red),
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: const Text(
+                          "Add to Cart",
+                          style: TextStyle(
+                            fontFamily: 'MetropolisRegular',
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
       ],
     );
